@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sobrenosotros</title>
+
+</head>
+<body>
+    <header> 
+
+        <img src=  "" alt="Logo" width="100" height="64"> 
+        <nav>
+
+            <ul>
+                
+                <a> Inicio </a>
+                 <a>Nosotros</a>
+                 <a>Redes sociales</a>
+                 <a> Menú</a>
+
+            </ul>
+     </nav>
+
+    </header>
+
+    <main> 
+<section>
+    <h1> Sobre nosotros </h1>
+    <p> </p>
+   
+</section>
+
+    
+
+    <main>
+</body>
+</html>
