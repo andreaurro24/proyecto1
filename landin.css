@@ -26,8 +26,12 @@ nav a:hover {
     color: #ffcc00; /* Color del texto de los enlaces de navegación al pasar el cursor por encima */
 }
 p{
+
     font-size: 40px;
     padding: 10px 20px;
+    background-color: #fff3e5;
+    border-radius: 10%;
+    font-family: A
    
 }
 h1{
