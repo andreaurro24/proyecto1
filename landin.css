@@ -3,6 +3,7 @@
 header {
     background-color: #fff3e5;
     text-align: left; /* Centrar el contenido del header */
+    gap: 8rem;
 }
 
 header img {
@@ -16,10 +17,10 @@ nav a {
     font-size: 24px;
     font-weight: bold;
     padding: 20px 20px;
+    padding-right: 10%;
     line-height: 24px;
     display: inline-block;
-    margin: 0;
-    ;
+
 }
 
 nav a:hover {
