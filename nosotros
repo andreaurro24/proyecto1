@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>nosotros</title>
+<link rel="stylesheet" href="estilo_nosotros.css"/>
+
+</head>
+<body>
+    <header>        
+        <nav>
+
+            <ul>
+                <li><a><img src="Logo_venecosteños.jpeg" alt="Logo" width="100" height="64"> </a></li>
+                <li><a>Nosotros</a></li>
+                <li><a>Redes sociales</a></li>
+                <a> Menú</a>
+            </ul>
+     </nav>
+
+    </header>
+
+    <main> 
+<section id="txt">
+    <h1> Sobre nosotros </h1>
+    <p> En la ciudad de Bogotá, Andrea, Juanes y Sebastian, amigos de la universidad, compartían la pasión por la cocina venezolana y costeña. Tras años de planificación, abrieron Venecosteños, un restaurante que fusiona los sabores de ambas culturas.  Venecosteños se convirtió en un punto de encuentro para amantes de la buena comida y la cultura latinoamericana. Cada plato refleja la autenticidad y el amor por la cocina tradicional, ofreciendo a los comensales una experiencia culinaria inolvidable que transporta a las costas de Venezuela y las playas de la región caribe colombiana.</p>
+   
+</section>
+
+<section id="nosotros"> 
+    <div>
+        <img src=  "" alt="foto Juanes" width="100" height="64"> 
+        <h2> Juan Esteban Rodríguez</h2>
+        <p>Nació en Villavicencio, Colombia</p>
+    </div>
+    <div>
+        <img src=  "" alt="foto Andrea" width="100" height="64"> 
+        <h2> Andrea Paola Urdaneta</h2>
+        <p>Nació en Mérida, Venezuela</p>
+    </div>
+    <div>
+        <img src=  "" alt="foto sebas" width="100" height="64"> 
+        <h2> Sebastian Gomez</h2>
+        <p>Nació en Barranquilla, Colombia</p>
+    </div>
+
+</section>
+
+    <main>
+</body>
+</html>
