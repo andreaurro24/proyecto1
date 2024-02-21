@@ -7,15 +7,14 @@
 <body>
     <header> 
 
-        <img src=  "" alt="Logo" width="100" height="64"> 
+        
         <nav>
 
             <ul>
-
-                <a> Inicio </a>
-                 <a>Nosotros</a>
-                 <a>Redes sociales</a>
-                 <a> Menú</a>
+                <a><img src=  "" alt="Logo" width="100" height="64"> </a>
+                <a>Nosotros</a>
+                <a>Redes sociales</a>
+                <a> Menú</a>
 
             </ul>
      </nav>
