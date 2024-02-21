@@ -9,24 +9,33 @@ body {
     font-family: Arial, sans-serif; 
 }
 
-
 header {
-    background-color: #fff3e5; 
-    padding: 10px; 
+    background-color: #fff3e5;
+    text-align: center; /* Centrar el contenido del header */
 }
 
-nav ul {
-    list-style-type: none;
-    display:flex;
-    gap: 20%; 
-    font-weight: 500;
-
+header img {
+    width: 100px; /* Ancho del logo */
+    height: 64px; /* Altura del logo */
 }
 
 nav a {
-    text-decoration: none; 
-    
+    text-decoration: none;
+    color: #ff8e00; /* Color del texto de los enlaces de navegación */
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 20px;
+    line-height: 24px;
+    display: inline-block;
+    margin: 0;
+    ;
 }
+
+nav a:hover {
+    color: #ffcc00; /* Color del texto de los enlaces de navegación al pasar el cursor por encima */
+}
+
+
 
 main {
     padding: 20px; 
