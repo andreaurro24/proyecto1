@@ -1,7 +1,7 @@
 
 
 header {
-
+    background-color: #fff3e5;
     text-align: center; /* Centrar el contenido del header */
 }
 
@@ -55,3 +55,7 @@ h1{
     display: block;
     width: 100%; 
     object-fit: cover;}
+    section>img{
+        border-radius: 20%;
+        margin: 10px ;
+    }
