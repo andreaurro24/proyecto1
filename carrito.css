@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff8e00;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.carrito-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-weight: bold;
+}
