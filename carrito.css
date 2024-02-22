@@ -1,61 +1,86 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
+    background-color: #f8f9fa;
 }
 
 header {
-    background-color:#fff3e5;
-    color: #ff8e00;
+    background-color: #ff8e00;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 main {
     max-width: 600px;
     margin: 20px auto;
-}
-
-.carrito-lista {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .carrito-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
 }
 
+/* Estilo del total */
 .total {
     font-weight: bold;
+    font-size: 18px;
+    color: #333;
 }
-button{
-    background-color: #ff8e00;   
+
+button {
+    background-color: #ff8e00;
     color: white;
-    border: none;
     padding: 10px 20px;
-    height: 30px;
+    height: 40px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-
+    transition: background-color 0.3s;
+    border: none;
 }
 
 button.regresar-carrito a {
-    color: inherit;
+    color: #fff;
     text-decoration: none;
-  }
-  
-div{
+    font-weight: bold;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:5%
+    gap: 20px;
 }
-.eliminar-item:active {
-    background-color: #f44336; /* Rojo oscuro cuando se hace clic */
+
+.eliminar-item {
+    color: #fff;
+    background-color: #ff8e00;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.eliminar-item:hover {
+    background-color: #f44336;
+}
+
+
+button:hover {
+    background-color: #ffab4f;
 }

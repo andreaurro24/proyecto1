@@ -1,17 +1,21 @@
 header {
     background-color: #fff3e5;
-    text-align: left; /* Centrar el contenido del header */
+    text-align: left; 
 }
 
 header img {
-    width: 140px; /* Ancho del logo */
-    height: 120px; /* Altura del logo */
+    width: 140px; 
+    height: 120px; 
     margin-right: 20px;
 }
+.h2 {
+    font-size: 30 px;
+    text-align: center;
 
+}
 nav a {
     text-decoration: none;
-    color: #ff8e00; /* Color del texto de los enlaces de navegación */
+    color: #ff8e00; 
     font-size: 24px;
     font-weight: bold;
     padding: 20px 20px;
@@ -32,7 +36,7 @@ p {
 }
 
 .alimento {
-    background-color: #f9f9f9;
+    background-color: #fff3e5;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
@@ -41,9 +45,8 @@ p {
 
 .alimento h3 {
     font-size: 20px;
-    margin-bottom: 10px; /* Espacio en la parte inferior del título */
-    margin-top: 0; /* Añadir margen superior para separar el título */
-}
+    margin-bottom: 10px; 
+   }
 
 .alimento img {
     max-width: 100%;
