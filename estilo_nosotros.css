@@ -1,9 +1,24 @@
 
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    padding: 1% 1%;
+    background-color: #C02E0F;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffcc18;
 }
-
+#hist{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    padding: 1% 1%;
+    background-color: #fff3e5;
+    border-radius: 10%;
+}
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+}
 
 body {
     font-family: Arial, sans-serif; 
@@ -16,8 +31,8 @@ header {
 }
 
 header img {
-    width: 100px; /* Ancho del logo */
-    height: 64px; /* Altura del logo */
+    width: 100px; 
+    height: 64px; 
 }
 
 nav a {
@@ -29,11 +44,10 @@ nav a {
     padding-right: 10%;
     line-height: 24px;
     display: inline-block;
-
 }
 
 nav a:hover {
-    color: #ffcc00; /* Color del texto de los enlaces de navegación al pasar el cursor por encima */
+    color: #ffcc00; 
 }
 
 main {

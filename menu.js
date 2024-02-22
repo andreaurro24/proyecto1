@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function agregarAlCarrito(nombre, precio) {
         carrito.push({ nombre, precio });
         localStorage.setItem('carrito', JSON.stringify(carrito));
-        mostrarCarrito();
+        
     }
 
     const botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');

@@ -13,15 +13,20 @@ header img {
 }
 
 nav a {
+
     text-decoration: none;
     color: #ff8e00; 
     font-size: 24px;
-    font-weight: bold;
-    padding: 20px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px 10px;
+    padding-right: 7%;
     line-height: 24px;
     display: inline-block;
-    margin: 0;
 }
+nav a:hover {
+    color: #ffcc00; 
+}
+
 
 p {
     font-size: 40px;
@@ -63,7 +68,7 @@ p {
     font-weight: bold;
 }
 
-/* Clearfix para manejar floats */
+
 main::after {
     content: "";
     display: table;
@@ -86,11 +91,10 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content; /* Puedes ajustar el ancho según sea necesario */
-    height: fit-content; /* Puedes ajustar la altura según sea necesario */
-    font-size: 16px; /* Puedes ajustar el tamaño de fuente según sea necesario */
-}
+    width: fit-content; 
+    height: fit-content; 
+    font-size: 16px;}
 
 .agregar-carrito:active {
-    background-color: #ffcc18; /* Verde oscuro cuando se hace clic */
+    background-color: #ffcc18;
 }
