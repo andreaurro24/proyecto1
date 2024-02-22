@@ -37,20 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('carrito', JSON.stringify(carrito));
         mostrarCarrito();
     }
+    function vaciarCarrito() {
+        carrito.length = 0; 
+        localStorage.removeItem('carrito'); 
+        mostrarCarrito(); 
+    }
 
-
-    
     const botonVaciarCarrito = document.getElementById('vaciar-carrito');
     botonVaciarCarrito.addEventListener('click', () => {
     vaciarCarrito();
         });
     
-        // Función para vaciar el carrito
-    function vaciarCarrito() {
-            carrito.length = 0; // Vacía el array del carrito
-            localStorage.removeItem('carrito'); // Elimina el carrito del localStorage
-            mostrarCarrito(); // Actualiza la visualización del carrito en la página
-        }
-
     mostrarCarrito();
 });
