@@ -43,3 +43,6 @@ button{
     outline: none;
 
 }
+.eliminar-item:active {
+    background-color: #f44336; /* Rojo oscuro cuando se hace clic */
+}
