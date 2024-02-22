@@ -64,7 +64,7 @@ p {
     font-weight: bold;
 }
 
-/* Clearfix para manejar floats */
+
 main::after {
     content: "";
     display: table;
