@@ -25,24 +25,23 @@ p {
     padding: 10px 20px;
 }
 
+.alimentos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 .alimento {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    width: calc(50% - 40px); /* Tamaño para 2 alimentos por fila con espacio entre ellos */
-    margin-bottom: 40px; /* Espacio entre filas de alimentos */
     box-sizing: border-box;
-    float: left; /* Para alinear dos elementos por fila */
-}
-
-.alimento:nth-child(2n) {
-    margin-left: 40px; /* Espacio entre elementos */
 }
 
 .alimento h3 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espacio en la parte inferior del título */
     margin-top: 0; /* Añadir margen superior para separar el título */
 }
 
@@ -68,11 +67,9 @@ main::after {
     display: table;
     clear: both;
 }
-div>div{
-    display:flex
-}
-button{
-    background-color: #ff8e00;   
+
+button {
+    background-color: #ff8e00;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -81,8 +78,17 @@ button{
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
-
 }
+
+.agregar-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Puedes ajustar el ancho según sea necesario */
+    height: fit-content; /* Puedes ajustar la altura según sea necesario */
+    font-size: 16px; /* Puedes ajustar el tamaño de fuente según sea necesario */
+}
+
 .agregar-carrito:active {
-    background-color:#ffcc18; /* Verde oscuro cuando se hace clic */
+    background-color: #ffcc18; /* Verde oscuro cuando se hace clic */
 }
