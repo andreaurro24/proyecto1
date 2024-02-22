@@ -83,3 +83,6 @@ button{
     margin-top: 10px;
 
 }
+.agregar-carrito:active {
+    background-color:#ffcc18; /* Verde oscuro cuando se hace clic */
+}
