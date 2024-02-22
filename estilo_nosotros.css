@@ -11,7 +11,8 @@ body {
 
 header {
     background-color: #fff3e5;
-    text-align: left; /* Centrar el contenido del header */
+    text-align: left; 
+    
 }
 
 header img {
@@ -21,14 +22,14 @@ header img {
 
 nav a {
     text-decoration: none;
-    color: #ff8e00; /* Color del texto de los enlaces de navegación */
+    color: #ff8e00; 
     font-size: 24px;
-    font-weight: bold;
-    padding: 20px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px 10px;
+    padding-right: 10%;
     line-height: 24px;
     display: inline-block;
-    margin: 0;
-    ;
+
 }
 
 nav a:hover {
