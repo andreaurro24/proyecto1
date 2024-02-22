@@ -36,21 +36,20 @@ nav a:hover {
     color: #ffcc00; /* Color del texto de los enlaces de navegación al pasar el cursor por encima */
 }
 
-
-
 main {
     padding: 20px; 
 }
 
 #txt {
-    margin-bottom: 20px; /* Add spacing between sections */
+    margin-bottom: 20px; 
+    
 }
 
-/* Style the individual sections for Juanes, Andrea, and Sebastian */
 section div {
-    text-align: center; /* Center text within each section */
-    margin-bottom: 20px; /* Add spacing between sections */
+    text-align: center; 
+    margin-bottom: 20px; 
 }
+
 #nosotros{
     display: flex;
     gap: 10%;
@@ -58,8 +57,8 @@ section div {
     
 }
 
-/* Optionally, you can add specific styles for images within sections */
+
 section img {
-    border-radius: 50%; /* Apply a rounded border to images */
-    margin-bottom: 10px; /* Add some spacing below images */
+    border-radius: 50%; 
+    margin-bottom: 10px; 
 }
