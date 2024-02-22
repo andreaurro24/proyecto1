@@ -31,11 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function agregarAlCarrito(nombre, precio) {
-        carrito.push({ nombre, precio });
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        mostrarCarrito();
-    }
 
     function eliminarDelCarrito(index) {
         carrito.splice(index, 1);
@@ -43,14 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarCarrito();
     }
 
-    const botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');
-    botonesAgregarCarrito.forEach((boton) => {
-        boton.addEventListener('click', () => {
-            const nombre = boton.getAttribute('data-nombre');
-            const precio = parseFloat(boton.getAttribute('data-precio'));
-            agregarAlCarrito(nombre, precio);
-        });
-    });
 
     
     const botonVaciarCarrito = document.getElementById('vaciar-carrito');
