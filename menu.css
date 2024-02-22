@@ -87,11 +87,10 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content; /* Puedes ajustar el ancho según sea necesario */
-    height: fit-content; /* Puedes ajustar la altura según sea necesario */
-    font-size: 16px; /* Puedes ajustar el tamaño de fuente según sea necesario */
-}
+    width: fit-content; 
+    height: fit-content; 
+    font-size: 16px;}
 
 .agregar-carrito:active {
-    background-color: #ffcc18; /* Verde oscuro cuando se hace clic */
+    background-color: #ffcc18;
 }
