@@ -30,3 +30,16 @@ main {
 .total {
     font-weight: bold;
 }
+button{
+    background-color: #ff8e00;   
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+
+}

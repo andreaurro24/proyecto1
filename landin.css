@@ -33,7 +33,7 @@ p{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 h1{
-    font-size: 50px;
+    font-size: 60px;
     padding: 10px 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 200;
@@ -61,7 +61,12 @@ h1{
     display: block;
     width: 100%; 
     object-fit: cover;}
+<<<<<<< Updated upstream
 section>img{
+=======
+
+    section>img{
+>>>>>>> Stashed changes
         border-radius: 20%;
         margin: 10px ;
 }
