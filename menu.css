@@ -98,3 +98,5 @@ button {
 .agregar-carrito:active {
     background-color: #ffcc18;
 }
+div>img{
+    border-radius: 10%;}
