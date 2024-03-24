@@ -100,3 +100,21 @@ button {
 }
 div>img{
     border-radius: 10%;}
+
+    .menu-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .alimento {
+        width: calc(50% - 20px); /* Two columns with some spacing */
+        margin-bottom: 20px; /* Adjust as needed */
+    }
+    
+    .alimento img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px; /* Adjust as needed */
+    }
