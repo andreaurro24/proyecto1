@@ -10,7 +10,7 @@ function mostrarMenu(data) {
     const menu = `
       <div class="alimento">
         <h3>${item.Nombre}</h3>
-        <img src="${item.Imagen}" alt="Imagen ${item.Nombre}" class="imagen" width="200">
+        <img src=${item.Imagen} alt="Imagen ${item.Nombre}" class="imagen" width="200">
         <p>${item.descripcion}</p>
         <div>
           <p class="precio">Precio: ${item.precio}$</p>
