@@ -36,14 +36,16 @@
 
     /* Estilos para el aside */
     .carrito {
+        position: sticky;
+        top: 80px;
+        float: right;
+        height: fit-content;
         width: 300px; /* Ancho fijo del aside */
         padding: 20px;
-        background-color: #fff;
+        background-color: #fff3e5;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: sticky;
         top: 0; /* Fija el aside en la parte superior */
-        overflow-y: auto;
         margin-left: auto; /* Mueve el aside hacia la derecha */
     }
 
