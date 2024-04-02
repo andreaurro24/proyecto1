@@ -93,10 +93,16 @@
         font-weight: bold;
         margin-top: 10px;
         text-align: center;
+        text-decoration: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
     }
 
     button:hover {
         background-color: #ffab4f;
+        text-decoration: none;
     }
 
     /* Estilos para el menú */

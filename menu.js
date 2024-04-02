@@ -6,8 +6,8 @@ async function mostrarMenu(data) {
   const bebidasSection = document.getElementById('bebidas');
   const postresSection = document.getElementById('postres');
 
-  await new Promise(resolve => setTimeout(resolve, 1)); // Simular una operación asincrónica con un delay de 1 segundo
-
+  await new Promise(resolve => setTimeout(resolve, 1)); 
+  
   data.forEach(item => {
     const menu = `
       <div class="alimento">
