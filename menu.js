@@ -1,10 +1,12 @@
 
 // Función para obtener y mostrar el menú
-function mostrarMenu(data) {
+async function mostrarMenu(data) {
   const entradasSection = document.getElementById('entradas');
   const platosSection = document.getElementById('platos');
   const bebidasSection = document.getElementById('bebidas');
   const postresSection = document.getElementById('postres');
+
+  await new Promise(resolve => setTimeout(resolve, 1)); // Simular una operación asincrónica con un delay de 1 segundo
 
   data.forEach(item => {
     const menu = `
@@ -36,6 +38,7 @@ function mostrarMenu(data) {
         break;
     }
   });
+
 
   // Agregar eventos para los botones de "Agregar al carrito"
   const botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');
