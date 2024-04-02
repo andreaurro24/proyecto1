@@ -57,7 +57,7 @@
         margin-bottom: 10px;
         padding: 10px;
         border-radius: 5px;
-        background-color: #f5f5f5;
+        background-color: #fff;
     }
 
     .total {
@@ -105,17 +105,8 @@
         text-decoration: none;
     }
 
-    /* Estilos para el menú */
-    #menu {
-        flex-grow: 1; /* El menú ocupa todo el espacio disponible */
-        max-width: calc(90% - 300px); /* Resta el ancho del aside para evitar que se superpongan */
-    }
 
-    .menu-section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+   
 
     .alimento {
         width: 100%; /* El menú ocupará todo el ancho disponible */
@@ -148,3 +139,32 @@
         font-size: 18px;
         font-weight: bold;
     }
+
+    /* Estilos para cuando la pantalla sea más pequeña */
+@media screen and (max-width: 768px) {
+    /* Estilos para el aside en pantallas más pequeñas */
+    .carrito {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+        top: 0;
+    }
+
+    /* Estilos para los elementos del menú en pantallas más pequeñas */
+    .menu-section {
+        grid-template-columns: 1fr;
+    }
+
+    .alimento {
+        width: 100%;
+    }
+
+    /* Añadir estilos adicionales para el aside */
+    .carrito {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
