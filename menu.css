@@ -139,32 +139,24 @@
         font-size: 18px;
         font-weight: bold;
     }
-
-    /* Estilos para cuando la pantalla sea más pequeña */
+/* Estilos para cuando la pantalla sea más pequeña */
 @media screen and (max-width: 768px) {
     /* Estilos para el aside en pantallas más pequeñas */
     .carrito {
-        position: relative;
-        width: 100%;
-        margin-top: 20px;
-        margin-left: 0;
-        top: 0;
+        position: relative; /* Cambia la posición a relativa para que se muestre abajo */
+        width: 100%; /* Ancho total */
+        margin-top: 20px; /* Margen arriba para separarlo del contenido */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 0; /* Ajusta la posición si es necesario */
     }
 
     /* Estilos para los elementos del menú en pantallas más pequeñas */
-    .menu-section {
-        grid-template-columns: 1fr;
+    #menu .menu-section {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
     }
 
-    .alimento {
-        width: 100%;
-    }
-
-    /* Añadir estilos adicionales para el aside */
-    .carrito {
-        position: relative;
-        width: 100%;
-        margin-top: 20px;
-        margin-left: 0;
+    #menu .alimento {
+        width: 100%; /* Ocupa todo el ancho disponible */
     }
 }
+
