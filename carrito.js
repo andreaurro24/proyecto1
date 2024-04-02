@@ -37,16 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('carrito', JSON.stringify(carrito));
         mostrarCarrito();
     }
+    
     function vaciarCarrito() {
         carrito.length = 0; 
         localStorage.removeItem('carrito'); 
         mostrarCarrito(); 
     }
-
+    
     const botonVaciarCarrito = document.getElementById('vaciar-carrito');
     botonVaciarCarrito.addEventListener('click', () => {
-    vaciarCarrito();
-        });
+        vaciarCarrito();
+    });
     
     mostrarCarrito();
 });
@@ -55,16 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const nombre = document.getElementById('nombre').value;
         const telefono = document.getElementById('telefono').value;
         const direccion = document.getElementById('direccion').value;
+        const productos = JSON.parse(localStorage.getItem('carrito')) || [];
         const total = document.getElementById('total').innerText.replace('Total: $', ''); // Obtener el valor del total eliminando 'Total: $'
         
         const formData = new FormData();
         formData.append('nombre', nombre);
         formData.append('telefono', telefono);
         formData.append('direccion', direccion);
+        formData.append('productos', JSON.stringify(productos));
         formData.append('total', total);
-     
 
-        fetch('https://script.google.com/macros/s/AKfycbzEOpkkHAwB2NwsgpMq1pEIMj2qJaHWoWxXuYCdA7ww6zV6L6rCrrxDq-UScI5tyW8/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbzvmetY8I93rbyeoE5qt9eDxJdmCPnVn7G4Gze7IltqyD9rHh7WhwrB9o9p3aO_xmKa/exec', {
             method: 'POST',
             body: formData
         })
@@ -76,12 +78,29 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             alert(data);
+            limpiarCampos(); // Llama a la función para limpiar los campos después de procesar el pago
+            vaciarCarrito(); // Llama a la función para vaciar el carrito después de procesar el pago
         })
         .catch(error => {
             console.error('Error al procesar el pago:', error);
             alert('Ocurrió un error al procesar el pago. Por favor, inténtalo nuevamente.');
         });
     });
+
+    // Función para mostrar el carrito
+    mostrarCarrito();
+
+    // Función para limpiar los campos de nombre, teléfono y dirección
+    function limpiarCampos() {
+        document.getElementById('nombre').value = '';
+        document.getElementById('telefono').value = '';
+        document.getElementById('direccion').value = '';
+    }
+
+    // Función para vaciar el carrito
+    function vaciarCarrito() {
+        localStorage.removeItem('carrito');
+    }
 });
 
 
