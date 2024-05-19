@@ -11,12 +11,12 @@ async function mostrarMenu(data) {
   data.forEach(item => {
     const menu = `
       <div class="alimento">
-        <h3>${item.Nombre}</h3>
-        <img src=${item.Imagen} alt="Imagen ${item.Nombre}" class="imagen" width="200">
+        <h3>${item.name}</h3>
+        <img src=${item.imagen} alt="Imagen ${item.name}" class="imagen" width="200">
         <p>${item.descripcion}</p>
         <div>
           <p class="precio">Precio: ${item.precio}$</p>
-          <button class="agregar-carrito" data-nombre="${item.Nombre}" data-precio="${item.precio}">Agregar al carrito</button>
+          <button class="agregar-carrito" data-nombre="${item.name}" data-precio="${item.precio}">Agregar al carrito</button>
         </div>
       </div>
     `;
@@ -106,18 +106,17 @@ function vaciarCarrito() {
   localStorage.removeItem('carrito');
   mostrarCarrito();
 }
+fetch('http://127.0.0.1:8000/api/v1/product/all')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    mostrarMenu(data);
+  })
+  .catch(error => {
+    // Manejar errores
+    console.error('Error al obtener los productos:', error);
+  });
 
-// Evento al cargar el contenido de la página
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('https://script.googleusercontent.com/macros/echo?user_content_key=sPoYhZ2_fu91CHCLOxbtxJ3VAibH1lzfxFJdJIu2NeF_i1z8jBw-vWP7SkR7Bhwah1n1mhxw_L__QCE8TaVaIYP3LTZ3CV-dm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLSOfp1PbPJ9yXN1htccS--BDu1NXaXUwIDo2OZk6NO7NXxpN4uP2eD9mC5TZI2Js_VivHFVcOqZGh4sIWU56Up_ZSiLPg-_QA&lib=MgV0Ind5lHrgV5aQeM3aiRVMOtaQ-MCV5')
-    .then(response => response.json())
-    .then(jsonData => {
-      const data = jsonData.data; // Accede a la propiedad "data" del JSON
-      mostrarMenu(data);
-    })
-    .catch(error => console.error('Error al obtener los datos de la API:', error));
-
-  mostrarCarrito(); // Mostrar el carrito al cargar la página
 
   // Evento para vaciar el carrito
   const botonVaciarCarrito = document.getElementById('vaciar-carrito');
@@ -135,4 +134,4 @@ document.addEventListener('DOMContentLoaded', () => {
       aside.style.top = 'auto';
     }
   });
-});
+

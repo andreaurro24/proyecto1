@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('total', total);
 
         fetch('https://script.google.com/macros/s/AKfycbzvmetY8I93rbyeoE5qt9eDxJdmCPnVn7G4Gze7IltqyD9rHh7WhwrB9o9p3aO_xmKa/exec', {
-            method: 'POST',
+            method: 'POST', // cambiar link 
             body: formData
         })
         .then(response => {
