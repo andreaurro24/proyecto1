@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const li = document.createElement('li');
             li.classList.add('carrito-item');
             li.innerHTML = `
+                
                 <span>${item.nombre}</span>
                 <span>$${item.precio.toFixed(2)} x ${item.quantity || 1}</span>
                 <button class="eliminar-item" data-index="${index}">Eliminar</button>
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             boton.addEventListener('click', () => {
                 const index = parseInt(boton.getAttribute('data-index'));
                 eliminarDelCarrito(index);
+                console.log(carrito);
             });
         });
     }
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: direccion,
             products: productos.map(producto => ({
                 product_id: producto.id,
-                quantity: 1
+                quantity: producto.quantity
             }))
         };
 
