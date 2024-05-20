@@ -11,6 +11,7 @@ async function mostrarMenu(data) {
   data.forEach(item => {
     const menu = `
       <div class="alimento">
+        <h2>${item.id}</h2>
         <h3>${item.name}</h3>
         <img src=${item.imagen} alt="Imagen ${item.name}" class="imagen" width="200">
         <p>${item.descripcion}</p>
@@ -51,9 +52,11 @@ async function mostrarMenu(data) {
 function agregarAlCarrito(event) {
   const nombre = event.target.getAttribute('data-nombre');
   const precio = parseFloat(event.target.getAttribute('data-precio'));
+  const id= event.target.getAttribute('data-id');
 
+  
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-  const nuevoItem = { nombre, precio };
+  const nuevoItem = { nombre, precio , id };
 
   carrito.push(nuevoItem);
   localStorage.setItem('carrito', JSON.stringify(carrito));

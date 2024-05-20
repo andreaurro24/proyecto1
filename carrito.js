@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function mostrarCarrito() {
         const listaCarrito = document.getElementById('lista-carrito');
         const totalElemento = document.getElementById('total');
+        
 
         listaCarrito.innerHTML = '';
 
-        const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+        // Calcular el total sumando los precios multiplicados por la cantidad
+        const total = carrito.reduce((acc, item) => acc + item.precio * (item.quantity || 1), 0);
 
         totalElemento.textContent = `Total: $${total.toFixed(2)}`;
 
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li.classList.add('carrito-item');
             li.innerHTML = `
                 <span>${item.nombre}</span>
-                <span>$${item.precio.toFixed(2)}</span>
+                <span>$${item.precio.toFixed(2)} x ${item.quantity || 1}</span>
                 <button class="eliminar-item" data-index="${index}">Eliminar</button>
             `;
             listaCarrito.appendChild(li);
@@ -31,64 +33,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     function eliminarDelCarrito(index) {
         carrito.splice(index, 1);
         localStorage.setItem('carrito', JSON.stringify(carrito));
         mostrarCarrito();
+        console.log(carrito);
+       
     }
-    
+
     function vaciarCarrito() {
-        carrito.length = 0; 
-        localStorage.removeItem('carrito'); 
-        mostrarCarrito(); 
+        carrito.length = 0;
+        localStorage.removeItem('carrito');
+        mostrarCarrito();
     }
-    
+
     const botonVaciarCarrito = document.getElementById('vaciar-carrito');
     botonVaciarCarrito.addEventListener('click', () => {
         vaciarCarrito();
+
     });
-    
+
     mostrarCarrito();
-});
-document.addEventListener('DOMContentLoaded', function() {
+
     document.getElementById('procesar-pago').addEventListener('click', function() {
         const nombre = document.getElementById('nombre').value;
         const telefono = document.getElementById('telefono').value;
         const direccion = document.getElementById('direccion').value;
         const productos = JSON.parse(localStorage.getItem('carrito')) || [];
         const total = document.getElementById('total').innerText.replace('Total: $', ''); // Obtener el valor del total eliminando 'Total: $'
-        
-        const formData = new FormData();
-        formData.append('nombre', nombre);
-        formData.append('telefono', telefono);
-        formData.append('direccion', direccion);
-        formData.append('productos', JSON.stringify(productos));
-        formData.append('total', total);
 
-        fetch('https://script.google.com/macros/s/AKfycbzvmetY8I93rbyeoE5qt9eDxJdmCPnVn7G4Gze7IltqyD9rHh7WhwrB9o9p3aO_xmKa/exec', {
-            method: 'POST', // cambiar link 
-            body: formData
+        // Construir el objeto de datos para la solicitud
+        const requestData = {
+            user_id: 1, // Supongamos que el ID del usuario es 1. Ajustar según tu lógica.
+            total: parseFloat(total),
+            address: direccion,
+            products: productos.map(producto => ({
+                product_id: producto.id,
+                quantity: 1
+            }))
+        };
+
+        // Enviar la solicitud POST al servidor
+        fetch('http://127.0.0.1:8000/api/v1/order/enviar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
         })
         .then(response => {
             if (!response.ok) {
-                throw new Error('Ocurrió un error al procesar el pago.');
+                return response.json().then(errorData => {
+                    throw new Error(errorData.error || 'Error al procesar la solicitud');
+                });
             }
-            return response.text();
+            return response.json();
         })
         .then(data => {
-            alert(data);
+            alert('Orden creada exitosamente');
             limpiarCampos(); // Llama a la función para limpiar los campos después de procesar el pago
             vaciarCarrito(); // Llama a la función para vaciar el carrito después de procesar el pago
         })
         .catch(error => {
             console.error('Error al procesar el pago:', error);
-            alert('Ocurrió un error al procesar el pago. Por favor, inténtalo nuevamente.');
+            alert(`Ocurrió un error al procesar el pago: ${error.message}`);
         });
     });
-
-    // Función para mostrar el carrito
-    mostrarCarrito();
 
     // Función para limpiar los campos de nombre, teléfono y dirección
     function limpiarCampos() {
@@ -96,15 +106,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('telefono').value = '';
         document.getElementById('direccion').value = '';
     }
-
-    // Función para vaciar el carrito
-    function vaciarCarrito() {
-        localStorage.removeItem('carrito');
-    }
 });
-
-
-function obtenerItemsCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    return carrito;
-}
