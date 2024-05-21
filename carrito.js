@@ -60,14 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('procesar-pago').addEventListener('click', function() {
         const nombre = document.getElementById('nombre').value;
         const telefono = document.getElementById('telefono').value;
+        const cedula = document.getElementById('cedula').value;
         const direccion = document.getElementById('direccion').value;
         const productos = JSON.parse(localStorage.getItem('carrito')) || [];
         const total = document.getElementById('total').innerText.replace('Total: $', ''); // Obtener el valor del total eliminando 'Total: $'
 
         // Construir el objeto de datos para la solicitud
         const requestData = {
-            user_id: 1, // Supongamos que el ID del usuario es 1. Ajustar según tu lógica.
+          
             total: parseFloat(total),
+            nombre: nombre,
+            telefono: telefono,
+            cedula: cedula,
             address: direccion,
             products: productos.map(producto => ({
                 product_id: producto.id,
@@ -106,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function limpiarCampos() {
         document.getElementById('nombre').value = '';
         document.getElementById('telefono').value = '';
+        document.getElementById('cedula').value = '';
         document.getElementById('direccion').value = '';
     }
 });
